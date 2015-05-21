@@ -1,0 +1,22 @@
+[user]
+	name = Lee Donald
+	email = solgems@gmail.com
+
+[alias]
+	l = log --graph --pretty=format:'%C(auto)%h %C(bold blue)<%an> %Cgreen(%cr) - %C(auto)%d%Creset %s' --abbrev-commit
+	la = log --graph --pretty=format:'%C(auto)%h %C(bold blue)<%an> %Cgreen(%cr) - %C(auto)%d%Creset %s' --abbrev-commit --all
+
+[core]
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = auto
+	branch = auto
+	status = auto
+
+[log]
+	decorate = short
+
+[push]
+	default = simple
