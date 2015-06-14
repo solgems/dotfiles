@@ -46,3 +46,28 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"----------------------------------------------
+
+set number          " show line number
+set showmatch       " show matching brackets/parenthesis
+
+set hlsearch        " highlight search results
+set incsearch       " search as you type instead of enter
+
+set ignorecase      " case insensitive search
+set smartcase       " becomes sensitive when caps is used
+
+set tabstop=4       " spaces to display a tab
+set softtabstop=4   " spaces to replace tab in expandtab
+set shiftwidth=4    " spaces to move with << and >>
+set expandtab       " use spaces instead of tabs
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,trail:.,eol:¬
+"Invisible character colors 
+highlight NonText guifg=#4a4a59     "eol, extends, precedes
+highlight SpecialKey guifg=#4a4a59  "nbsp, tab, trail
+
