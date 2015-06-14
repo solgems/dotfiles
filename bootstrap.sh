@@ -10,7 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files=".config/fish/config.fish .config/fish/functions .git .gitconfig .gitignore_global .thefuck .tmux.conf .vimrc .vim"
+files=".config/fish/config.fish .config/fish/functions .gitconfig .gitignore_global .thefuck .tmux.conf .vimrc .vim"
 
 ##########
 
