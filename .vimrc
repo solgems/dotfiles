@@ -51,6 +51,9 @@ filetype plugin indent on    " required
 set number          " show line number
 set showmatch       " show matching brackets/parenthesis
 
+filetype plugin on          " force file type detection
+filetype plugin indent on   " language-dependent Gndenting
+
 set hlsearch        " highlight search results
 set incsearch       " search as you type instead of enter
 
