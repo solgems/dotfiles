@@ -51,8 +51,7 @@ filetype plugin indent on    " required
 set number          " show line number
 set showmatch       " show matching brackets/parenthesis
 
-filetype plugin on          " force file type detection
-filetype plugin indent on   " language-dependent Gndenting
+filetype plugin on  " force file type detection
 
 set hlsearch        " highlight search results
 set incsearch       " search as you type instead of enter
@@ -73,4 +72,10 @@ set listchars=tab:▸\ ,trail:.,eol:¬
 "Invisible character colors 
 highlight NonText guifg=#4a4a59     "eol, extends, precedes
 highlight SpecialKey guifg=#4a4a59  "nbsp, tab, trail
+
+" Practise makes perfect
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
