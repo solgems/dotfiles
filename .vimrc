@@ -32,6 +32,9 @@ Plugin 'gmarik/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+" custom plug ins
+Plugin 'easymotion/vim-easymotion'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,22 +50,30 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "----------------------------------------------
+" :set (command)?   - query (command)'s state, eg. :set autoindent?
+" :map              - lists configured remaps 
 
 set number          " show line number
+set t_Co=256        " set colors from 8 to 256
 set showmatch       " show matching brackets/parenthesis
-
-filetype plugin on  " force file type detection
+set cursorline      " show current line
 
 set hlsearch        " highlight search results
 set incsearch       " search as you type instead of enter
+" mute search hl until next search
+" <C-u> clears command, wiping any range when entering from visual mode
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set ignorecase      " case insensitive search
-set smartcase       " becomes sensitive when caps is used
+set smartcase       " becomes sensitive when caps is used in search
 
 set tabstop=4       " spaces to display a tab
 set softtabstop=4   " spaces to replace tab in expandtab
 set shiftwidth=4    " spaces to move with << and >>
 set expandtab       " use spaces instead of tabs
+
+set autoindent      " indentation starts same as the prev line
+set smartindent     " use for programming
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
