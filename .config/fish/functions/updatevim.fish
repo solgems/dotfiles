@@ -1,4 +1,4 @@
 function updatevim
     set -lx SHELL (which sh)
-    vim +BundleInstall! +BundleClean +qall
+    vim +PluginInstall! +PluginClean +qall
 end
