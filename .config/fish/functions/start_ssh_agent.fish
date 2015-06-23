@@ -1,20 +1,15 @@
-#this script can never fail
-#i use it in the fish_config
-#call it with start_agent
-
 setenv SSH_ENV $HOME/.ssh/environment
-
 
 function start_ssh_agent
 	if [ -n "$SSH_AGENT_PID" ]
-    		ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
-    		if [ $status -eq 0 ]
-        		test_identities
-    		end
+        ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
+        if [ $status -eq 0 ]
+            test_identities
+        end
 	else
-    		if [ -f $SSH_ENV ]
-        		. $SSH_ENV > /dev/null
-    		end
+        if [ -f $SSH_ENV ]
+            . $SSH_ENV > /dev/null
+        end
     	ps -ef | grep $SSH_AGENT_PID | grep -v grep | grep ssh-agent > /dev/null
     	if [ $status -eq 0 ]
         	test_identities
@@ -22,15 +17,14 @@ function start_ssh_agent
     		echo "Initializing new SSH agent ..."
 	        ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
     		echo "succeeded"
-		chmod 600 $SSH_ENV 
+		chmod 600 $SSH_ENV
 		. $SSH_ENV > /dev/null
     		ssh-add
-	end
+        end
 	end
 end
 
-
-function test_identities                                                                                                                                                                
+function test_identities
     ssh-add -l | grep "The agent has no identities" > /dev/null
     if [ $status -eq 0 ]
         ssh-add
@@ -40,10 +34,9 @@ function test_identities
     end
 end
 
-
 function fish_title
     if [ $_ = 'fish' ]
-	echo (prompt_pwd)
+        echo (prompt_pwd)
     else
         echo $_
     end
