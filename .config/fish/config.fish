@@ -9,3 +9,5 @@ function fuck -d 'Correct your previous console command'
     eval (__thefuck_repl (cat $eval_script))
     rm $eval_script
 end
+
+set -gx PATH $PATH ~/npm-global/bin
