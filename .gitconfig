@@ -5,6 +5,9 @@
 [alias]
 	l = log --graph --pretty=format:'%C(auto)%h %C(bold blue)<%an> %Cgreen(%cr) - %C(auto)%d%Creset %s' --abbrev-commit
 	la = log --graph --pretty=format:'%C(auto)%h %C(bold blue)<%an> %Cgreen(%cr) - %C(auto)%d%Creset %s' --abbrev-commit --all
+	b = for-each-ref --sort -committerdate refs/heads/ --format='%(committerdate:short)%09%(committerdate:relative)%09%(objectname:short)%09%(refname:short) %(upstream:trackshort) %(upstream:short) %(upstream:track)'
+	d = diff
+	dc = diff --cached
 
 [core]
 	editor = /usr/bin/vim
