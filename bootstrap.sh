@@ -10,7 +10,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files=".config/fish/config.fish .config/fish/functions .gitconfig .gitignore_global .thefuck .tmux.conf .vimrc .vim"
+files=".gitconfig .gitignore_global .tmux.conf .vimrc .vim"
 
 ##########
 
@@ -32,4 +32,4 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
-source ~/.bashrc
+source ~/.zshrc
